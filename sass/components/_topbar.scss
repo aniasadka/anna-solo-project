@@ -1,4 +1,4 @@
-topbar {
+.topbar {
     height: 64px;  /*Full-height: remove this if you want "auto" height */
     width: $topbar-width;  /*Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
@@ -103,7 +103,6 @@ topbar {
 }
     }
 }
-// .block-header > div 
 .block-header .big,
 .block-header .small 
 {
@@ -120,7 +119,7 @@ topbar {
     .topbar {
         right: 0;
         left: 46px;
-        width: 400px;
+        width: 93%;
       }
       .block-topbar {
         -ms-flex: 2.5;
@@ -129,23 +128,32 @@ topbar {
         background: white;
     }
       .menu-icon  {
-        // margin-right: 20px;
-        // margin-left: 10px;
-        // margin-top: -5px;
-        // margin-bottom: -9px;
         margin: -5px 20px -9px 10px;
-
       }
 
     .block-header .small a {
         position: static;
         margin: -58% 3px -2px 0%;
     }
-}
 
+    .block-header .small{
+        width: 10%;
+    }
+    .block-header .big{
+        width: 20%;
+    }
+    .block-header .vertical-line{
+        width: 0;
+        margin: 0;
+    }
+    .topbar .empty-space{
+            flex: 0;
+        }
+}
+    
 @media (min-width: 768px) and (max-width: 1024px) {
     .topbar {
-        width: 875px;
+        width: 100%;
         left: 0;
     }
     .block-header .small a {
