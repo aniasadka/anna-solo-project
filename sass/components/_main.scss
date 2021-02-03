@@ -1,211 +1,212 @@
 .component-main {
-    width: $topbar-width;
-    position: absolute; /* Fixed Sidebar (stay in place on scroll) */
-    left: $sidebar-width;
-    z-index: 0;
-    top: 64px;
-    background-color: $grey-tab-color;
+  width: $topbar-width;
+  position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+  left: $sidebar-width;
+  z-index: 0;
+  top: 64px;
+  background-color: $grey-tab-color;
+}
+
+.main-section {
+  background-color: $links-color;
+  margin: 30px 20px 10px 20px;//L
+  & h1 {
+    font-size: 20px;
+    color: #808080;
+    padding: 20px;
+    margin-bottom: 0;
   }
-  
-  .main-section {
-    background-color: $links-color;
-    margin: 30px 20px 10px 20px;//L
-    & h1 {
-      font-size: 20px;
-      color: #808080;
-      padding: 20px;
-      margin-bottom: 0;
-    }
-    & .horizontal-line {
-      border-top: 1px groove $grey-tab-color; 
-      color: $grey-tab-color;
-    }
-    & .btn-orange{
-      background-color: $button-background-color;
-      width: 50px;
-      height: 50px;
-      margin-left: 10px;
-      border-radius: 5px;
-      padding: 2px;
-      & .button-icon {
-        color: white;
-        padding: 14px;
-        width: 25px;
-        height: 22px;
-        font-size: 18px;
-        filter: invert(95%) sepia(97%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
-      }
-    }
+  & .horizontal-line {
+    border-top: 1px groove $grey-tab-color; 
+    color: $grey-tab-color;
   }
-  
-  .statistics  .component-calendar {
-    margin: 40px 0;
-    display: flex;
-    justify-content: center;
-    & .calendar-box {
-      background-color: white;
-      width: 200px;
-      height: 50px;
-      margin: 0;
-      border: 1px solid lightgrey;
-      display: flex;
-      align-items: center;
-      & p {
-        display: inline-block;
-        margin-left: 10px;
-        margin-right: auto;
-        font-family: Arial;
-        font-size: 16px;
-        color: black;
-      }
-    }
-  }
-  
-  .main-section .menu-icon {
-    width: 25px;
-    height: 22px;
-    font-size: 18px;
-    padding: 10px;
-    // color: white;
-    filter: invert(83%) sepia(78%) saturate(0%) hue-rotate(202deg) brightness(93%) contrast(85%);
-    margin-right: 10px;
+  & .btn-orange{
+    background-color: $button-background-color;
+    width: 50px;
+    height: 50px;
     margin-left: 10px;
+    border-radius: 5px;
+    padding: 2px;
+    & .button-icon {
+      color: white;
+      padding: 14px;
+      width: 25px;
+      height: 22px;
+      font-size: 18px;
+      filter: invert(95%) sepia(97%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
+    }
   }
-  
-  
-  .statistics .statistic-numbers {
-    margin: 40px 0;
+}
+
+.statistics  .component-calendar {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  & .calendar-box {
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    margin: 0;
+    border: 1px solid lightgrey;
     display: flex;
-    justify-content: center;
-  }
-  
-  .statistics .statistic-table {
-    margin: 50px;
-    border-collapse: collapse;
-  
-    & .statistic-text {
-      font-size: 22px;
-      font-weight: bold;
-      color:  #808080;
-      padding: 10px 250px 10px 0;
-      text-align: left;
-    }
-    & .statistic-number {
-      font-size: 22px;
-      font-weight: lighter;;
-    }
-    & tr {
-      border-bottom: 1px solid black;
+    align-items: center;
+    & p {
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: auto;
+      font-family: Arial;
+      font-size: 16px;
+      color: black;
     }
   }
-  
-  .statistics .chart {
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  /* links */
-  .links .menu-icon {
-    opacity: 0;
-  }
-  
-  .links-table a {
-    display: block;
-    text-decoration: none;
-  }
-  
-  .links-table {
-    border-collapse: collapse;
-    & .links-title {
-      font-size: 22px;
-      font-weight: bold;
-      color:  #808080;
-      padding: 10px 320px 10px 0;
-      text-align: left;
-    }
-  }
-  
-  .links-table tr {
-        border-bottom: 1px solid black;
-        border-top: 1px solid black;
-        height: 70px;
-  }
-  
-  .links-table tr:hover {
-        background-color: $grey-tab-color;
-  }
-  
-  .links-table tr:hover .menu-icon {
-    opacity: 1;
-  }
-  
-  .links .component-links {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .links-table a {
-    padding-right: 100px;
+}
+
+.main-section .menu-icon {
+  width: 25px;
+  height: 22px;
+  font-size: 18px;
+  padding: 10px;
+  // color: white;
+  filter: invert(83%) sepia(78%) saturate(0%) hue-rotate(202deg) brightness(93%) contrast(85%);
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+.statistics .statistic-numbers {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.statistics .statistic-table {
+  margin: 50px;
+  border-collapse: collapse;
+
+  & .statistic-text {
     font-size: 22px;
-    color: $chart-signups-color;
+    font-weight: bold;
+    color:  #808080;
+    padding: 10px 250px 10px 0;
+    text-align: left;
+  }
+  & .statistic-number {
+    font-size: 22px;
+    font-weight: lighter;;
+  }
+  & tr {
+    border-bottom: 1px solid black;
+  }
+}
+
+.statistics .chart {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* links */
+.links .menu-icon {
+  opacity: 0;
+}
+
+.links-table a {
+  display: block;
+  text-decoration: none;
+}
+
+.links-table {
+  border-collapse: collapse;
+  & .links-title {
+    font-size: 22px;
+    font-weight: bold;
+    color:  #808080;
+    padding: 10px 320px 10px 0;
+    text-align: left;
+  }
+}
+
+.links-table tr {
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
+      height: 70px;
+}
+
+.links-table tr:hover {
+      background-color: $grey-tab-color;
+}
+
+.links-table tr:hover .menu-icon {
+  opacity: 1;
+}
+
+.links .component-links {
+  display: flex;
+  justify-content: center;
+}
+
+.links-table a {
+  padding-right: 100px;
+  font-size: 22px;
+  color: $chart-signups-color;
+}
+
+.links .links-button a {
+  font-size: 26px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding-top: 13px;
+  margin: 30px;
+}
+
+a.btn-orange.button-add {
+  width: 150px;
+}
+
+.links .links-button {
+  text-align: center;
+}
+
+.links .links-icon {
+  color: $chart-ftd-color;
+  filter: invert(83%) sepia(78%) saturate(0%) hue-rotate(202deg) brightness(93%) contrast(85%);
+}
+
+#myChart{
+  width: 1000px;
+  height: 500px;
+}
+
+/* Media */
+@media (max-width: 767px) {
+  .component-main {
+    left:0;
+    width: 100%;
+  }
+
+  .statistics .statistic-numbers {
+    flex-wrap: wrap;
+  }
+  .links .component-links {
+    flex-direction: column;
+    overflow-x: auto;
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .component-main {
+    left:0;
+    width: 100%;
+  }
+  .statistics .statistic-numbers {
+    flex-wrap: wrap;
+  }
+  .links .component-links {
+    flex-direction: column;
+    overflow-x: auto;
+    flex-wrap: wrap;
+  }
   }
   
-  .links .links-button a {
-    font-size: 26px;
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    padding-top: 13px;
-    margin: 30px;
-  }
-  
-  a.btn-orange.button-add {
-    width: 150px;
-  }
-  
-  .links .links-button {
-    text-align: center;
-  }
-  
-  .links .links-icon {
-    color: $chart-ftd-color;
-    filter: invert(83%) sepia(78%) saturate(0%) hue-rotate(202deg) brightness(93%) contrast(85%);
-  }
-  
-  #myChart{
-    width: 1000px;
-    height: 500px;
-  }
-  
-  /* Media */
-  @media (max-width: 767px) {
-    .component-main {
-      left:0;
-      width: 100%;
-    }
-  
-    .statistics .statistic-numbers {
-      flex-wrap: wrap;
-    }
-    .links .component-links {
-      flex-direction: column;
-      overflow-x: auto;
-      flex-wrap: wrap;
-    }
-  }
-  
-  
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .component-main {
-      left:0;
-      width: 100%;
-    }
-    .statistics .statistic-numbers {
-      flex-wrap: wrap;
-    }
-    .links .component-links {
-      flex-direction: column;
-      overflow-x: auto;
-      flex-wrap: wrap;
-    }
-    }

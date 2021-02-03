@@ -13,10 +13,8 @@ document.querySelector('.hamburger-icon').addEventListener('click', function (e)
 });
 
 
-//WYKRES
-
+//Chart
 var ctx = document.getElementById('myChart').getContext('2d');
-
 
 var chart = new Chart(ctx, {
   // 1
@@ -51,4 +49,4 @@ var chart = new Chart(ctx, {
   },
 });
 
-console.log(chart); 
+console.log(chart);
