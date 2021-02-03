@@ -1,0 +1,155 @@
+topbar {
+    height: 64px;  /*Full-height: remove this if you want "auto" height */
+    width: $topbar-width;  /*Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1;  //Stay on top
+    top: 0;  /*Stay at the top */
+    left: $sidebar-width;
+    background-color: $links-color;
+    display: flex;
+    & .block-topbar {
+        flex: 2.5;
+        border: 1px groove;
+    }
+    & ul li {
+        display: inline-block;
+        margin-top: 20px;
+    }
+    & .menu-icon {
+        width: 25px;
+        height: 28px;
+        font-size: 18px;
+
+        filter: invert(83%) sepia(78%) saturate(0%) hue-rotate(202deg) brightness(93%) contrast(85%);
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+    & .empty-space{
+        flex: 3;
+    }
+}
+
+.block-header {
+    display: flex;
+    height: 100%; 
+    width: 100%;
+    & .big{
+        flex: 8;
+        display: inline;
+        position: relative;
+        & a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            & .user-name {
+                height: 28px;  
+                font-size: large;
+                padding-top: 8px;
+            }
+        }
+        & .gathering{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            margin-left: 15px;
+            & .money {
+                height: 28px; 
+                font-size: x-large;
+                font-weight: bolder;
+                font-family: $brand-font;
+                padding-top: 6px;
+                color: grey;
+            }
+            & a{
+                display: inline-block;
+                text-align: center;
+                height: 23px;
+                padding-top: 11px;
+            }
+        }
+
+
+    }
+    & .small{
+        flex: 2;
+        position: relative;
+        & a{
+            display: inline-block;
+        /* Center vertically and horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25% 0 0 -33%; /* apply negative top and left margins to truly center the element */
+
+        }
+        & .dot {
+  height: 8px;
+  width: 8px;
+  background-color: $button-background-color;
+  border-radius: 50%;
+  display: inline-block;
+
+   /* Center vertically and horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -30% 0 0 2%;
+}
+    }
+}
+// .block-header > div 
+.block-header .big,
+.block-header .small 
+{
+    margin: 20px 0;
+}
+
+.vertical-line {
+    border-left: 1px groove $grey-tab-color; 
+    height: 100%;
+    margin: 0 15px;
+}
+
+@media(max-width: 767px) {
+    .topbar {
+        right: 0;
+        left: 46px;
+        width: 400px;
+      }
+      .block-topbar {
+        -ms-flex: 2.5;
+        flex: 2.5;
+        border: 1px groove;
+        background: white;
+    }
+      .menu-icon  {
+        // margin-right: 20px;
+        // margin-left: 10px;
+        // margin-top: -5px;
+        // margin-bottom: -9px;
+        margin: -5px 20px -9px 10px;
+
+      }
+
+    .block-header .small a {
+        position: static;
+        margin: -58% 3px -2px 0%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .topbar {
+        width: 875px;
+        left: 0;
+    }
+    .block-header .small a {
+        margin: 0;
+        position: static;
+}
+}
